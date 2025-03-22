@@ -1,5 +1,6 @@
 
 import { useEffect } from 'react';
+import { useTheme } from 'next-themes';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
@@ -7,8 +8,12 @@ import HowItWorks from '../components/HowItWorks';
 import Testimonials from '../components/Testimonials';
 import LeadForm from '../components/LeadForm';
 import Footer from '../components/Footer';
+import { Moon, Sun } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Index = () => {
+  const { theme, setTheme } = useTheme();
+
   useEffect(() => {
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -45,8 +50,27 @@ const Index = () => {
     };
   }, []);
 
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden dark:bg-gray-900">
+      <div className="fixed bottom-6 right-6 z-50">
+        <Button 
+          onClick={toggleTheme} 
+          variant="outline" 
+          size="icon"
+          className="rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg"
+        >
+          {theme === 'dark' ? (
+            <Sun className="h-5 w-5 text-lovify-gold" />
+          ) : (
+            <Moon className="h-5 w-5 text-lovify-purple" />
+          )}
+          <span className="sr-only">Toggle theme</span>
+        </Button>
+      </div>
       <Navbar />
       <main>
         <Hero />
