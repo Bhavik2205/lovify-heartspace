@@ -4,7 +4,7 @@ import { Heart } from 'lucide-react';
 const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <div className="absolute top-0 left-0 w-full h-full -z-10 bg-lovify-softgray">
+      <div className="absolute top-0 left-0 w-full h-full -z-10 bg-lovify-softgray dark:bg-lovify-black/90">
         <div className="absolute top-0 left-0 w-full h-full opacity-30">
           <div className="absolute top-10 left-[10%] w-64 h-64 rounded-full gradient-ping blur-3xl"></div>
           <div className="absolute bottom-10 right-[5%] w-80 h-80 rounded-full gradient-ping blur-3xl"></div>
@@ -15,13 +15,13 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="w-full lg:w-1/2 lg:pr-12 hero-animation-container">
             <div className="mb-6">
-              <span className="inline-block px-4 py-2 rounded-full bg-white shadow-sm border border-lovify-pink/20 text-xs md:text-sm font-medium gradient-text mb-4">
+              <span className="inline-block px-4 py-2 rounded-full bg-white dark:bg-lovify-charcoal shadow-sm border border-lovify-pink/20 text-xs md:text-sm font-medium gradient-text mb-4">
                 Dating Reimagined
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight dark:text-white">
                 Meet. Match. <span className="gradient-text">Make Magic.</span>
               </h1>
-              <p className="text-gray-600 text-lg mb-8">
+              <p className="text-gray-600 dark:text-gray-300 text-lg mb-8">
                 Discover authentic connections on Lovify — where meaningful relationships begin with a simple swipe.
               </p>
             </div>
@@ -30,20 +30,27 @@ const Hero = () => {
               <a href="#sign-up" className="button-primary">
                 Get Early Access
               </a>
-              <a href="#how-it-works" className="button-secondary">
+              <a href="#how-it-works" className="button-secondary dark:border-lovify-pink/50 dark:text-white">
                 Learn More
               </a>
             </div>
             
             <div className="flex items-center gap-6">
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white">
-                    <div className={`w-full h-full rounded-full bg-gradient-to-br from-pink-${300 + i*100} to-purple-${300 + i*100}`}></div>
-                  </div>
-                ))}
+                <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white dark:border-lovify-charcoal">
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-pink-400 to-purple-400"></div>
+                </div>
+                <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white dark:border-lovify-charcoal">
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-pink-500 to-purple-500"></div>
+                </div>
+                <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white dark:border-lovify-charcoal">
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-pink-600 to-purple-600"></div>
+                </div>
+                <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white dark:border-lovify-charcoal">
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-pink-700 to-purple-700"></div>
+                </div>
               </div>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 <span className="font-semibold">10,000+</span> early signups
               </p>
             </div>
@@ -66,7 +73,7 @@ const Hero = () => {
               <div className="absolute -bottom-4 -right-4 glass-card p-3 rounded-2xl shadow-lg">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-lovify-pink animate-pulse"></div>
-                  <p className="text-xs font-medium">2,521 online now</p>
+                  <p className="text-xs font-medium dark:text-white">2,521 online now</p>
                 </div>
               </div>
             </div>
