@@ -64,6 +64,56 @@ const FeatureVisual = ({ className }: { className?: string }) => {
   );
 };
 
+const AppPreview = () => {
+  return (
+    <div className="relative mt-16 mb-8 flex flex-col md:flex-row items-center justify-center gap-8">
+      <div className="glass-card dark:bg-gray-800/30 p-5 rounded-3xl shadow-xl max-w-xs transform -rotate-3 transition-transform duration-300 hover:rotate-0">
+        <div className="bg-gradient-to-br from-lovify-pink to-lovify-purple rounded-2xl p-1">
+          <div className="bg-white dark:bg-gray-900 rounded-xl p-3">
+            <div className="flex justify-between items-center mb-3">
+              <h4 className="text-sm font-bold dark:text-white">Discover</h4>
+              <Heart className="w-4 h-4 text-lovify-pink" />
+            </div>
+            <div className="w-full h-40 bg-gray-200 dark:bg-gray-700 rounded-lg mb-3"></div>
+            <div className="flex justify-center space-x-4">
+              <div className="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center">
+                <span className="text-xl">❌</span>
+              </div>
+              <div className="w-12 h-12 rounded-full bg-lovify-pink flex items-center justify-center">
+                <span className="text-xl">💖</span>
+              </div>
+              <div className="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center">
+                <span className="text-xl">⭐</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="glass-card dark:bg-gray-800/30 p-5 rounded-3xl shadow-xl max-w-xs transform rotate-3 transition-transform duration-300 hover:rotate-0">
+        <div className="bg-gradient-to-br from-lovify-purple to-lovify-pink rounded-2xl p-1">
+          <div className="bg-white dark:bg-gray-900 rounded-xl p-3">
+            <div className="flex justify-between items-center mb-3">
+              <h4 className="text-sm font-bold dark:text-white">Messages</h4>
+              <MessageCircle className="w-4 h-4 text-lovify-purple" />
+            </div>
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="flex items-center gap-3 mb-3 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-purple-500"></div>
+                <div className="flex-1">
+                  <h5 className="text-xs font-semibold dark:text-white">Sarah {i}</h5>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Hey there! How's your day?</p>
+                </div>
+                <div className="text-xs text-gray-400">2m</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Features = () => {
   const features = [
     {
@@ -94,7 +144,7 @@ const Features = () => {
       icon: User,
       title: "Profile",
       description: "Create a profile that truly represents who you are and what you're looking for.",
-      accentColor: "bg-lovify-charcoal"
+      accentColor: "bg-lovify-charcoal dark:bg-lovify-gold"
     }
   ];
 
@@ -115,6 +165,8 @@ const Features = () => {
         </div>
 
         <FeatureVisual className="mb-16" />
+        
+        <AppPreview />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 feature-card-container">
           {features.map((feature, index) => (
