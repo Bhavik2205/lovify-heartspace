@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Heart } from 'lucide-react';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 
 const LeadForm = () => {
   const [formData, setFormData] = useState({
