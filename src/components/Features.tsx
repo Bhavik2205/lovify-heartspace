@@ -56,7 +56,14 @@ const Features = () => {
       title: "Profile",
       description: "Create a profile that truly represents who you are and what you're looking for.",
       accentColor: "bg-lovify-charcoal"
-    }
+    },
+    {
+      icon: MessageCircle,
+      title: "Random Chat",
+      description:
+        "Start spontaneous, anonymous chats with strangers — just like Omegle, but safer and smarter.",
+      accentColor: "bg-lovify-blue",
+    },
   ];
 
   return (

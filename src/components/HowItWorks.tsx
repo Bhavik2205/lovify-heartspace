@@ -7,7 +7,7 @@ const Step = ({
   title, 
   description 
 }: { 
-  number: number; 
+  number?: number; 
   icon: any; 
   title: string; 
   description: string;
@@ -24,9 +24,9 @@ const Step = ({
           <Icon className="w-10 h-10 text-white" />
         </div>
         
-        <div className="w-8 h-8 rounded-full bg-white border-2 border-lovify-pink flex items-center justify-center absolute -top-2 -right-2">
+        {/* <div className="w-8 h-8 rounded-full bg-white border-2 border-lovify-pink flex items-center justify-center absolute -top-2 -right-2">
           <span className="font-bold text-lovify-pink">{number}</span>
-        </div>
+        </div> */}
         
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p className="text-gray-600 text-center max-w-xs">{description}</p>
