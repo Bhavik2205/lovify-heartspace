@@ -54,7 +54,7 @@ const LeadForm = () => {
   };
 
   return (
-    <section id="sign-up" className="section-spacing gradient-bg">
+    <section id="sign-up" className="section-spacing bg-lovify-softgray">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
           <div className="grid md:grid-cols-5">

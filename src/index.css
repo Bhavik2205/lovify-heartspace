@@ -125,7 +125,7 @@
 }
 
 .hero-animation-container > div {
-  @apply opacity-0;
+  /* opacity: 0; */
   animation: float-up 0.8s ease-out forwards;
 }
 
@@ -142,7 +142,6 @@
 }
 
 .feature-card-container > div {
-  @apply opacity-0;
   animation: float-up 0.8s ease-out forwards;
 }
 

@@ -8,6 +8,7 @@ export default {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./src/**/*.{html,js,css}",
   ],
   prefix: "",
   theme: {
@@ -74,6 +75,7 @@ export default {
           black: "#1A1A1A",
           charcoal: "#2C2C2C",
           softgray: "#F6F6F6",
+          blue: "#1E91E4",
         },
       },
       borderRadius: {
@@ -130,5 +132,7 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate")
+  ],
 } satisfies Config;

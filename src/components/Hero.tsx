@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="w-full lg:w-1/2 lg:pr-12 hero-animation-container">
             <div className="mb-6">
-              <span className="inline-block px-4 py-2 rounded-full bg-white shadow-sm border border-lovify-pink/20 text-xs md:text-sm font-medium gradient-text mb-4">
+              <span className="inline-block px-4 py-2 rounded-full bg-white shadow-sm border border-lovify-pink/20 text-lg md:text-sm font-medium gradient-text mb-4">
                 Dating Reimagined
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
@@ -51,7 +51,7 @@ const Hero = () => {
           
           <div className="w-full lg:w-1/2 mt-12 lg:mt-0 flex justify-center items-center hero-animation-container">
             <div className="relative">
-              <div className="absolute -top-6 -left-6 w-12 h-12 gradient-bg rounded-full flex items-center justify-center shadow-lg animate-heartbeat">
+              <div className="absolute -top-6 -left-6 w-12 h-12 gradient-bg rounded-full flex items-center justify-center shadow-lg animate-heartbeat z-20">
                 <Heart className="w-6 h-6 text-white" />
               </div>
               
@@ -63,7 +63,7 @@ const Hero = () => {
                 />
               </div>
               
-              <div className="absolute -bottom-4 -right-4 glass-card p-3 rounded-2xl shadow-lg">
+              <div className="absolute -bottom-4 -right-4 glass-card p-3 rounded-2xl shadow-lg z-10">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-lovify-pink animate-pulse"></div>
                   <p className="text-xs font-medium">2,521 online now</p>
